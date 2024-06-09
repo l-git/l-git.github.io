@@ -1,0 +1,132 @@
+﻿$(document).ready(function() {
+   // getSearch();
+    $("body").keydown(function() {
+        if (event.keyCode == 13) {
+            if (Trim($("#txtKey").val()).length > 0) {
+                search();
+            }
+        }
+    });
+});
+
+function lazyload(option) {
+    var settings = { defObj: null, defHeight: 0 }; settings = $.extend(settings, option || {}); var defHeight = settings.defHeight, defObj = (typeof settings.defObj == "object") ? settings.defObj.find("img") : $(settings.defObj).find("img"); var pageTop = function() { var d = document, y = (navigator.userAgent.toLowerCase().match(/iPad/i) == "ipad") ? window.pageYOffset : Math.max(d.documentElement.scrollTop, d.body.scrollTop); return d.documentElement.clientHeight + y - settings.defHeight }; var imgLoad = function() { defObj.each(function() { if ($(this).offset().top <= pageTop()) { var src2 = $(this).attr("src2"); if (src2) { $(this).attr("src", src2).removeAttr("src2") } } }) }; imgLoad(); $(window).bind("scroll", function() { imgLoad() })
+} 
+
+function lockLogin() {
+    var password = $("#txtPsw").val();
+    if (password.length == 0) {
+        alert("Please input password!");
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: "VisitHandler.ashx",
+        data: { lang: 'en', password: password },
+        context: document.body,
+        success: function(data) {
+            var result = data.toString().replace("<PRE>", "");
+            result = result.replace("</PRE>", "");
+            if (result.split('|')[0] == "1") {
+                location.href = result.split('|')[1];
+            } else {
+                alert(result.split('|')[1]);
+            }
+        },
+        error: function(err) {
+            alert("error!");
+        }
+    });
+}
+
+function getSearch() {
+    $.ajax({
+        type: "POST",
+        url: "SearchHandler.ashx",
+        data: { type: 'getsearch', lang: 'en' },
+        context: document.body,
+        success: function(data) {
+            categoryArr = data.toString().split('|');
+            for (var i = 0; i < categoryArr.length; i++) {
+                if (categoryArr[i].toString().length > 0) {
+                    $("#selectType").append("<option value='" + categoryArr[i].toString().split('#')[1] + "'>" + decodeURI(categoryArr[i].toString().split('#')[0]) + "</option>");
+                }
+            }
+        },
+        error: function(err) {
+            alert("error!");
+        }
+    });
+}
+function search() {
+    var key = Trim($("#txtKey").val());
+    if (key.length == 0) {
+        alert("Please input a keyword.");
+        return;
+    }
+    var type = $("#selectType").val();
+    $.ajax({
+        type: "POST",
+        url: "SearchHandler.ashx",
+        data: { type: type, key: encodeURI(key), lang: 'en' },
+        context: document.body,
+        success: function(data) {
+            var result = data.toString().replace("<PRE>", "");
+            result = result.replace("</PRE>", "");
+            if (result.split('|')[0] == "1") {
+                location.href = result.split('|')[1];
+            } else {
+                alert(result.split('|')[1]);
+            }
+        },
+        error: function(err) {
+            alert("error!");
+        }
+    });
+}
+
+
+function Trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/g, "");
+}
+
+function addFeedBack() {
+    var title = Trim($("#txtTitle").val());
+    var content = Trim($("#txtContent").val());
+    var userName = Trim($("#txtName").val());
+    var email = Trim($("#txtEmail").val());
+    var qq = Trim($("#txtQQ").val());
+    var tel = Trim($("#txtTel").val());
+    if (title.length == 0) {
+        alert("Please input title!");
+        return;
+    }
+    if (email.length == 0) {
+        alert("Please input email!");
+        return;
+    }
+    if (content.length == 0) {
+        alert("Please input content!");
+        return;
+    }
+    $.ajax({
+        type: "POST",
+        url: "FeedbackHandler.ashx",
+        data: { type: 'add', title: encodeURI(title), content: encodeURI(content), username: encodeURI(userName), email: encodeURI(email), qq: encodeURI(qq), tel: encodeURI(tel), lang: 'en' },
+        context: document.body,
+        success: function(data) {
+            var result = data.toString().replace("<PRE>", "");
+            result = result.replace("</PRE>", "");
+            if (result.split('|')[0] == "1") {
+                $("#txtTitle").attr("value", '');
+                $("#txtContent").attr("value", '');
+                alert(result.split('|')[1]);
+            } else {
+                alert(result.split('|')[1]);
+            }
+        },
+        error: function(err) {
+            alert("error!");
+        }
+    });
+}

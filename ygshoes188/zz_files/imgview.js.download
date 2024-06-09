@@ -1,0 +1,96 @@
+﻿      $(document).ready(function() {
+      $(".rootclass").mousemove(function(e){  
+             var positionX=e.originalEvent.x||e.originalEvent.layerX||0;
+             if(positionX<=$(this).width()/2){           
+             this.style.cursor='url("themes/default/en/images/pre.cur"),auto';
+             $(this).attr('title','Previous page');
+//             window.location.href=$(this).attr('left') 
+             $(this).parent().attr('href',$(this).attr('left')); 
+         }else{
+             this.style.cursor = 'url("themes/default/en/images/next.cur"),auto';
+             $(this).attr('title','Next page');
+             //window.location.href=$(this).attr('right') 
+             $(this).parent().attr('href',$(this).attr('right'));
+        }
+    });
+    suningImages().init();
+});
+
+var suningImages = function() {
+    var box = $('#bigpics');
+    var image = $('#pics');
+    var btn = image.find('li');
+    var len = btn.length;
+    var ul = image.find('ul');
+
+    return {
+        init: function() {
+            var that = this;
+            var posx;
+            var posy;
+            var i = 0;
+            ul.css('width', len * 86);
+            image.prev('div').click(function(e) {
+                //alert($(this));
+                if (i <= 0) {
+                    return false;
+                }
+                i--;
+                that.scroll(i);
+                e.preventDefault();
+            })
+
+            image.next('div').click(function(e) {
+                if (i >= parseInt(len / 7) || len <= 7) {
+                    return false;
+                }
+                i++;
+                that.scroll(i);
+                e.preventDefault();
+            })
+
+            btn.each(function(i) {
+                $(this).find('a').mouseover(function(e) {
+                    index = i;
+                    that.addbk(i);
+                    that.loadimg(i);
+                    e.preventDefault();
+                })
+            })
+
+        },
+        loadimg: function(i) {
+            //               box.html('<div class="loading"></div>');
+            var src = btn.eq(i).find('img').attr('src');
+            $("#photo_img").attr("src", src);
+            //alert($("#photo_img"));
+            //var maxlen = src.length;
+            //newsrc = src.slice(0, maxlen - 4) + "f.jpg";
+            // newsrc = src;
+            //box.html('<img src = ' + newsrc + '  />').find('img').hide();
+            //  box.find('img').fadeIn(250);
+        },
+        addbk: function(i) {
+            btn.eq(i).find('a').addClass('on').parent().siblings().find('a').removeClass('on');
+        },
+        scroll: function(i) {
+            ul.stop().animate({ marginLeft: -86 * 7 * i }, 300);
+        },
+        next: function(index) {
+            var that = this;
+            if (((index) % 7) == 0) {
+                ul.stop().animate({ marginLeft: -86 * (index) }, 300);
+            }
+            that.addbk(index);
+            setTimeout(function() { that.loadimg(index); }, 400);
+        },
+        prev: function(index) {
+            var that = this;
+            if ((index + 1) % 7 == 0) {
+                ul.stop().animate({ marginLeft: -86 * parseInt(index / 7) * 7 }, 300);
+            }
+            that.addbk(index);
+            setTimeout(function() { that.loadimg(index); }, 400);
+        }
+    }
+} 

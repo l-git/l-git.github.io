@@ -1,0 +1,249 @@
+﻿.rootclass{border: none; position: relative; }
+#product_toolbar {
+	MARGIN: 0px 0px 3px; PADDING-LEFT: 0px; WIDTH: 100%; FLOAT: left; HEIGHT: 23px
+}
+#product_nav {
+	LIST-STYLE-TYPE: none; FLOAT: left; MARGIN-LEFT: 0px
+}
+#product_nav LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 0px; FLOAT: left; PADDING-TOP: 0px
+}
+#product_nav LI A {
+	COLOR: #666; TEXT-DECORATION: none
+}
+#product_nav LI A:hover {
+	COLOR: #fff
+}
+#product_toolbar .tools {
+	PADDING-RIGHT: 140px; FLOAT: right
+}
+#product_toolbar .tools A {
+	TEXT-ALIGN: center; DISPLAY: block; BACKGROUND: url(../images/bg_tugo.png) no-repeat left -840px; FLOAT: left; HEIGHT: 20px; COLOR: #000; TEXT-DECORATION: none; PADDING-TOP: 4px
+}
+.tool_prev {
+	WIDTH: 58px
+}
+.prev_disabled {
+	WIDTH: 58px
+}
+.tool_next {
+	PADDING-LEFT: 12px; WIDTH: 46px
+}
+.next_disabled {
+	PADDING-LEFT: 12px; WIDTH: 46px
+}
+#product_toolbar .tools .tool_zoom {
+	WIDTH: 32px; BACKGROUND-POSITION: left -956px; HEIGHT: 20px
+}
+#product_toolbar .tools .tool_zoom:hover {
+	BACKGROUND-POSITION: left -985px
+}
+#product_toolbar .tools .tool_zoom:active {
+	BACKGROUND-POSITION: left -1014px
+}
+#product_toolbar .tools .tool_prev {
+	TEXT-ALIGN: left; PADDING-LEFT: 8px; WIDTH: 52px; BACKGROUND-POSITION: left -1043px
+}
+#product_toolbar .tools .prev_disabled {
+	TEXT-ALIGN: left; PADDING-LEFT: 8px; WIDTH: 52px; BACKGROUND-POSITION: left -1043px
+}
+#product_toolbar .tools .tool_prev:hover {
+	BACKGROUND-POSITION: left -1072px
+}
+#product_toolbar .tools .tool_prev:active {
+	BACKGROUND-POSITION: left -1101px
+}
+#product_toolbar .tools .tool_next:hover {
+	BACKGROUND-POSITION: left -869px
+}
+#product_toolbar .tools .tool_next:active {
+	BACKGROUND-POSITION: left -898px
+}
+#product_toolbar .tools .next_disabled {
+	BACKGROUND-POSITION: left -927px
+}
+#product_toolbar .tools .prev_disabled {
+	BACKGROUND-POSITION: left -1130px
+}
+.tool {
+	POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 26px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 23px; MARGIN-RIGHT: 4px
+}
+.tool-over {
+	POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 26px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 23px; MARGIN-RIGHT: 4px
+}
+.tool-down {
+	POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 26px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 23px; MARGIN-RIGHT: 4px
+}
+.tool-disabled {
+	POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 26px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 23px; MARGIN-RIGHT: 4px
+}
+.tool-dropdown {
+	POSITION: relative; BACKGROUND-COLOR: #fff; WIDTH: 26px; BACKGROUND-REPEAT: no-repeat; FLOAT: left; HEIGHT: 23px; MARGIN-RIGHT: 4px
+}
+.tool {
+	BACKGROUND-COLOR: #fff; BACKGROUND-POSITION: 0px 0px
+}
+.tool A {
+	WIDTH: 26px; DISPLAY: block; HEIGHT: 23px
+}
+.tool-over {
+	BACKGROUND-POSITION: 0px -23px
+}
+.tool-down {
+	BACKGROUND-POSITION: 0px -46px
+}
+.tool-disabled {
+	FILTER: progid:DXImageTransform.Microsoft.Alpha(opacity=30); BACKGROUND-POSITION: 0px 0px; opacity: .3; -moz-opacity: .3
+}
+.tool-dropdown {
+	BACKGROUND-POSITION: 0px -69px
+}
+.tool-popup {
+	POSITION: absolute; OVERFLOW: hidden
+}
+.tool-popup-title {
+	BORDER-BOTTOM: #999 0px solid; POSITION: absolute; BORDER-LEFT: #999 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 23px; BACKGROUND-COLOR: #fff; MARGIN: 0px; PADDING-LEFT: 60px; PADDING-RIGHT: 7px; HEIGHT: 23px; BORDER-TOP: #999 1px solid; TOP: 0px; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 0px; LEFT: 0px
+}
+.tool-popup-content {
+	BORDER-BOTTOM: #999 1px solid; BORDER-LEFT: #999 1px solid; PADDING-BOTTOM: 4px; BACKGROUND-COLOR: #fff; MARGIN-TOP: 23px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid; PADDING-TOP: 4px
+}
+.tool-popup-header {
+	BORDER-BOTTOM: #e5e5e5 1px solid; TEXT-ALIGN: center; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; MARGIN-BOTTOM: 0px; PADDING-TOP: 3px
+}
+.tool-popup-body {
+	MARGIN: 0px -4px
+}
+.tool-popup-footer {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 3px; PADDING-LEFT: 3px; PADDING-RIGHT: 3px; BORDER-TOP: #e5e5e5 1px solid; PADDING-TOP: 3px
+}
+.tool-popup-li {
+	PADDING-BOTTOM: 0px; LIST-STYLE-TYPE: none; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.tool-popup-li A {
+	DISPLAY: block
+}
+.tool-popup-li A:hover {
+	BACKGROUND: #ececec; CURSOR: inherit
+}
+.tool-popup-ul {
+	PADDING-BOTTOM: 4px; MARGIN: 0px; PADDING-LEFT: 4px; PADDING-RIGHT: 4px; PADDING-TOP: 4px
+}
+.tool-popup-fixheight {
+	HEIGHT: 240px; OVERFLOW: auto
+}
+.tool-popup-ul LI {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; PADDING-TOP: 0px
+}
+.tool-popup-ul LI A:link {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.tool-popup-ul LI A:visited {
+	PADDING-BOTTOM: 2px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; DISPLAY: block; TEXT-DECORATION: none; PADDING-TOP: 2px
+}
+.tool-popup-ul LI A:hover {
+	TEXT-DECORATION: none
+}
+.tool-popup-ul LI {
+	LINE-HEIGHT: 16px; LIST-STYLE-TYPE: none
+}
+.tool-popup-ul LI A.delete {
+	COLOR: #6b9f1f; TEXT-DECORATION: underline
+}
+.tool-popup-ul LI IMG {
+	VERTICAL-ALIGN: middle; MARGIN-RIGHT: 5px
+}
+
+
+#product_container {
+	BORDER-BOTTOM: #999 1px solid;text-align:center; TEXT-ALIGN: center;MARGIN: 2px 0px 0px 5px;BORDER-LEFT: #999 1px solid; WIDTH: 800px; FLOAT: left; HEIGHT: 600px; BORDER-TOP: #999 1px solid; BORDER-RIGHT: #999 1px solid
+}
+#product_container IMG {
+	
+}
+
+#productlist {
+	TEXT-ALIGN: center; WIDTH: 110px; FLOAT: right; HEIGHT: 500px;padding-right:10px
+}
+#product_item_container {
+	POSITION: relative; TEXT-ALIGN: center; HEIGHT: 426px; OVERFLOW: hidden
+}
+#productitem {
+	POSITION: absolute; MARGIN: 0px; DISPLAY: block; LEFT: 2px
+}
+#productitem A {
+	BORDER-BOTTOM: #a7a7a7 2px solid; BORDER-LEFT: #a7a7a7 2px solid; MARGIN: 5px auto 0px; WIDTH: 75px; DISPLAY: block; HEIGHT: 75px; BORDER-TOP: #a7a7a7 2px solid; BORDER-RIGHT: #a7a7a7 2px solid; TEXT-DECORATION: none
+}
+#productitem A IMG {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; DISPLAY: inline-block; BORDER-TOP-STYLE: none; FLOAT: left; BORDER-LEFT-STYLE: none
+}
+#productitem .current_product {
+	POSITION: relative; BORDER-BOTTOM-COLOR: #2d9200; BORDER-TOP-COLOR: #2d9200; DISPLAY: block; BORDER-RIGHT-COLOR: #2d9200; BORDER-LEFT-COLOR: #2d9200
+}
+#arrow_down {
+	POSITION: absolute; WIDTH: 6px; DISPLAY: block; BACKGROUND: url(../images/bg_tugo.png) #fff no-repeat -103px -350px; HEIGHT: 12px; TOP: 30px; LEFT: -8px
+}
+.prev_item {
+	WIDTH: 110px; HEIGHT: 28px
+}
+.next_item {
+	WIDTH: 110px; HEIGHT: 28px
+}
+.prev_item A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; TEXT-INDENT: -999px; WIDTH: 110px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/bg_tugo.png) no-repeat left -603px; HEIGHT: 28px; BORDER-LEFT-STYLE: none; OVERFLOW: hidden
+}
+.next_item A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; TEXT-INDENT: -999px; WIDTH: 110px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/bg_tugo.png) no-repeat left -603px; HEIGHT: 28px; BORDER-LEFT-STYLE: none; OVERFLOW: hidden
+}
+.prev_item_disabled A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; TEXT-INDENT: -999px; WIDTH: 110px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/bg_tugo.png) no-repeat left -603px; HEIGHT: 28px; BORDER-LEFT-STYLE: none; OVERFLOW: hidden
+}
+.next_item_disabled A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; TEXT-INDENT: -999px; WIDTH: 110px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/bg_tugo.png) no-repeat left -603px; HEIGHT: 28px; BORDER-LEFT-STYLE: none; OVERFLOW: hidden
+}
+.prev_item A:hover {
+	BACKGROUND-POSITION: left -636px
+}
+.prev_item A:active {
+	BACKGROUND-POSITION: left -669px
+}
+.next_item A {
+	BACKGROUND-POSITION: left -471px
+}
+.next_item A:hover {
+	BACKGROUND-POSITION: left -504px
+}
+.next_item A:active {
+	BACKGROUND-POSITION: left -537px
+}
+.prev_item_disabled A {
+	BACKGROUND-POSITION: left -701px
+}
+.next_item_disabled A {
+	BACKGROUND-POSITION: left -570px
+}
+
+infoDIV{ width:100%;text-align:left;overflow:hidden; }
+infoTitle{width:100%;padding:0px 10px 5px 10px;font-size:16px; font-weight:bold; border-bottom:dashed 1px #DEDEDE; padding:1px; display:inline-block; margin-top:3px;}
+.productItem{width:98%;margin:5px auto;overflow:hidden;border-bottom:dashed 1px #DEDEDE;padding:5px 0px;text-align:left; }
+.productItem ul{list-style:none;}
+.productItem li{margin:3px 0px;display:block;line-height:30px;BORDER-BOTTOM: #999 1px solid;}
+
+
+.switch {width:708px;height:87px;background:url(../images/switch_link_11.jpg) center 0px no-repeat;margin:0px auto;}
+.clear{clear:both;}
+.icon1{display:inline;width:15px;float:left;padding-top:30px;padding-left:18px;text-indent:-9999px;}
+.icon1 a{display:block;width:15px;height:30px;background:url(../images/sprite.gif) no-repeat -693px -92px;}
+.icon1 a:hover {background:url(../images/sprite.gif) no-repeat -693px -132px;}
+.icon2{float:right;width:15px;padding-top:30px;padding-right:15px;text-indent:-9999px;}
+.icon2 a{display:block;width:15px;height:30px;background:url(../images/sprite.gif) no-repeat -670px -92px;}
+.icon2 a:hover{background:url(../images/sprite.gif) no-repeat -670px -132px;}
+
+.switch_center {float:left;width:585px;height:83px;margin-left:28px;overflow:hidden;}
+.switch_center ul {}
+.switch_center li {display:inline;float:left;width:66px;height:66px;margin-right:20px;padding-top:10px;}
+.switch_center li a {display:block;width:60px;height:60px;border:1px solid #ccc;}
+.switch_center li a img {width:60px;height:60px;}
+.switch_center li a.on {
+	border:1px solid #FF9900;
+}
+.switch_center li a:hover {border:1px solid #FF9900;}

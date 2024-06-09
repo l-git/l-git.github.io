@@ -1,0 +1,89 @@
+﻿.table_1{
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-color: #e4e4e4;
+	border-left-color: #E4E4E4;
+	border-right-color: #E4E4E4;
+	color: #666666;
+}
+.table_1 th{
+	font-size: 12px;
+	line-height: 30px;
+	height: 30px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #dbdbdb;
+	border-bottom-color: #DBDBDB;
+	background-color: #f0f0f0;
+	color: #333333;
+	font-weight: normal;
+}
+.table_1 td{
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #E4E4E4;
+	line-height: 26px;
+}
+.table_2{
+	color: #666666;
+	border: 1px solid #e4e4e4;
+}
+.table_2 th{
+	font-size: 12px;
+	line-height: 26px;
+	height: 26px;
+	text-align: left;
+	padding-left: 5px;
+	font-weight: normal;
+	color: #333333;
+	background-color: #F0F0F0;
+}
+.table_2 td{
+	line-height: 26px;
+	height: 26px;
+	padding-left: 5px;
+	padding-right: 2px;
+	text-align: left;
+}
+.ys_tlbe {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.downTable{
+	border-top-width: 2px;
+	border-left-width: 1px;
+	border-right-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-color: #E36c1c;
+	border-left-color: #E36c1c;
+	border-right-color: #E36c1c;
+	color: #666666;
+}
+.downTable th{
+	font-size: 12px;
+	line-height: 30px;
+	height: 30px;
+	padding-left:10px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #E36c1c;
+	border-bottom-color: #E36c1c;
+	background-color: #fff;
+	color: #333333;
+	font-weight: normal;
+}
+.downTable td{
+	border-right: 1px solid #E36c1c;
+	border-bottom: 1px solid #E36c1c;
+	line-height: 26px;
+}
