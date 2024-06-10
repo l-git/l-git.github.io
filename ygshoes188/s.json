@@ -1,0 +1,21 @@
+[{
+    "folder":"p1",
+    "list":[
+        {
+            "imgUrl":"1.jpg"
+        },
+        {
+            "imgUrl":"2.jpg"
+        }
+    ]
+},{
+    "folder":"p2",
+    "list":[
+        {
+            "imgUrl":"1.jpg"
+        },
+        {
+            "imgUrl":"2.jpg"
+        }
+    ]
+}]
