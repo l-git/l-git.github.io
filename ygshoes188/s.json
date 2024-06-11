@@ -1,21 +1,27 @@
-[{
-    "folder":"p1",
-    "list":[
-        {
-            "imgUrl":"1.jpg"
-        },
-        {
-            "imgUrl":"2.jpg"
-        }
-    ]
-},{
-    "folder":"p2",
-    "list":[
-        {
-            "imgUrl":"1.jpg"
-        },
-        {
-            "imgUrl":"2.jpg"
-        }
-    ]
-}]
+[
+    {
+        "folder": "p1",
+        "list": [
+            {
+                "imgUrl": "1.jpg"
+            },
+            {
+                "imgUrl": "2.jpg"
+            },
+            {
+                "imgUrl": "3.jpg"
+            }
+        ]
+    },
+    {
+        "folder": "p2",
+        "list": [
+            {
+                "imgUrl": "1.jpg"
+            },
+            {
+                "imgUrl": "2.jpg"
+            }
+        ]
+    }
+]

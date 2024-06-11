@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+    <title></title>
+    <!-- 添加viewport元标签 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="./zz_files/jquery.js.download"></script>
+    </head>
+    <body>
+
+        <ul id="list">
+
+        </ul>
+
+
+        <script>
+            $.ajax({url:'/ygshoes188/s.json'
+            ,success(data){
+                let arr=JSON.parse(data)
+                let ll=''
+                for(let i=0;i<arr.length;i++){
+                    let num=i+1
+                    let o=arr[i]
+                    let a=`<div>${num}.<a href="/ygshoes188/m.html?p=${o.folder}">${o.folder}</a></div>`
+                    ll+=a
+
+
+
+                }
+                $('#list').html(ll)
+
+
+            }})
+        </script>
+    </body>
+</html>
